@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Shopee Indonesia | Situs Belanja Online Terlengkap &amp; Terpercaya</title>
+  
+  <!-- SEO & Metadata -->
+  <meta name="description" content="Belanja online mudah dan hemat di Shopee Indonesia. Temukan jutaan produk, Flash Sale setiap hari, Gratis Ongkir Rp0 ke seluruh Indonesia, dan promo 11.11!" />
+  <meta name="keywords" content="shopee, belanja online, flash sale, gratis ongkir, promo 11.11, diskon fashion, gadget murah, marketplace indonesia" />
+  <meta name="theme-color" content="#EE4D2D" />
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shopee Indonesia | Belanja Online Murah &amp; Terlengkap" />
+  <meta property="og:description" content="Pesta Diskon Flash Sale setiap jam, Klaim Voucher Gratis Ongkir Rp0 &amp; Cashback Koin!" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EE4D2D'%3E%3Cpath d='M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z'/%3E%3C/svg%3E" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Structured Data for E-Commerce SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Shopee Indonesia Storefront",
+    "url": "https://shopee.co.id/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://shopee.co.id/search?keyword={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessible Main Title for Screen Readers -->
+  <h1 class="sr-only">Shopee Indonesia - Super App Belanja Online Terlengkap, Flash Sale &amp; Gratis Ongkir</h1>
+
+  <!-- ======================================================================
+       A. GLOBAL HEADER & NAVIGASI (Sticky)
+       ====================================================================== -->
+  <header class="global-header" id="main-header">
+    <!-- Desktop Top Bar -->
+    <div class="header-topbar">
+      <div class="app-container topbar-inner">
+        <div class="topbar-left">
+          <a href="#" class="topbar-link" id="btn-download-app">📲 Download Aplikasi Shopee</a>
+          <span class="topbar-sep">|</span>
+          <a href="#" class="topbar-link" onclick="window.showToast?.('🏪 Menuju halaman pendaftaran penjual Shopee...'); return false;">Mulai Jual di Shopee</a>
+          <span class="topbar-sep">|</span>
+          <a href="#vouchers" class="topbar-link">🎟️ Dompet Voucher (<span id="user-voucher-count">0 Voucher</span>)</a>
+        </div>
+        <div class="topbar-right">
+          <a href="#" class="topbar-link" onclick="window.showToast?.('❓ Pusat Bantuan &amp; FAQ 24 Jam'); return false;">Bantuan</a>
+          <span class="topbar-sep">|</span>
+          <a href="#" class="topbar-link" id="btn-lang-toggle" onclick="window.showToast?.('🌐 Bahasa: Bahasa Indonesia'); return false;">🇮🇩 Bahasa Indonesia</a>
+          <span class="topbar-sep">|</span>
+          <div class="user-badge-wrap">
+            <span class="user-avatar-mini">D</span>
+            <span class="topbar-link">Danish (Shopee Member Platinum)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="header-main">
+      <div class="app-container header-main-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="header-logo" aria-label="Shopee Beranda">
+          <svg class="logo-icon-svg" viewBox="0 0 24 24">
+            <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+          </svg>
+          <div class="logo-text-group">
+            <span class="logo-title">Shopee</span>
+            <span class="logo-subtitle">Gratis Ongkir XTRA</span>
+          </div>
+        </a>
+
+        <!-- Smart Search Bar -->
+        <div class="header-search-wrap">
+          <form class="search-box-form" role="search" onsubmit="return false;">
+            <input 
+              type="search" 
+              id="global-search-input" 
+              class="search-input" 
+              placeholder="Cari di Shopee (misal: iPhone 15, Sneakers, Sunscreen, Kopi Gayo...)" 
+              autocomplete="off" 
+              aria-label="Cari produk di Shopee"
+            />
+            <button type="submit" class="search-submit-btn" aria-label="Mulai Pencarian">
+              <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </button>
+          </form>
+
+          <!-- Dynamic Search Dropdown / Suggestion Box -->
+          <div class="search-dropdown" id="search-suggest-dropdown" aria-live="polite">
+            <!-- Rendered dynamically by search.js -->
+          </div>
+
+          <!-- Desktop Quick Trending Keywords Bar below search -->
+          <div class="header-keywords-bar">
+            <span class="kw-chip" onclick="document.getElementById('global-search-input').value='TWS Bluetooth'; window.InfiniteScrollManager?.applySearchFilter('TWS Bluetooth');">TWS Bluetooth</span>
+            <span class="kw-chip" onclick="document.getElementById('global-search-input').value='Sepatu Sneakers'; window.InfiniteScrollManager?.applySearchFilter('Sneakers');">Sepatu Sneakers</span>
+            <span class="kw-chip" onclick="document.getElementById('global-search-input').value='Sunscreen SPF 50'; window.InfiniteScrollManager?.applySearchFilter('Sunscreen');">Sunscreen SPF 50</span>
+            <span class="kw-chip" onclick="document.getElementById('global-search-input').value='Smart Watch'; window.InfiniteScrollManager?.applySearchFilter('Smartwatch');">Smart Watch</span>
+            <span class="kw-chip" onclick="document.getElementById('global-search-input').value='Tumbler 1L'; window.InfiniteScrollManager?.applySearchFilter('Tumbler');">Tumbler Stainless</span>
+            <span class="kw-chip" onclick="document.getElementById('global-search-input').value='Kaos Oversized'; window.InfiniteScrollManager?.applySearchFilter('Kaos');">Kaos Oversized</span>
+          </div>
+        </div>
+
+        <!-- Header Action Icons (Chat, Notifications, Shopping Cart) -->
+        <div class="header-actions">
+          <!-- Chat with Seller Icon -->
+          <button class="header-action-btn" id="btn-chat" title="Chat dengan Penjual" onclick="window.showToast?.('💬 Fitur Chat Penjual: Anda memiliki 2 pesan belum dibaca.');" aria-label="Buka Chat Penjual">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+          </button>
+
+          <!-- Notification Icon with Badge -->
+          <button class="header-action-btn" id="btn-notifications" title="Pusat Notifikasi" aria-label="Lihat Notifikasi">
+            <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+            <span class="badge-counter" id="notif-badge-count">2</span>
+          </button>
+
+          <!-- Shopping Cart Icon with Real-Time Badge -->
+          <button class="header-action-btn btn-cart-trigger" id="btn-cart" title="Keranjang Belanja" aria-label="Buka Keranjang Belanja">
+            <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            <span class="badge-counter cart-badge-count" id="cart-badge-count">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN CONTENT
+       ====================================================================== -->
+  <main class="app-main">
+
+    <!-- ==================================================================
+         B. HERO SECTION (Auto-Rotating Banner Carousel & Side Promotions)
+         ================================================================== -->
+    <section class="hero-section" aria-label="Promosi Utama">
+      <div class="app-container">
+        <div class="hero-grid">
+          <!-- Main Carousel -->
+          <div class="carousel-container" id="hero-carousel" aria-roledescription="carousel" aria-label="Banner Promosi Puncak">
+            <div class="carousel-slides">
+              <!-- Injected by carousel.js -->
+            </div>
+            
+            <!-- Controls -->
+            <button class="carousel-arrow carousel-arrow-prev" aria-label="Banner Sebelumnya">&lsaquo;</button>
+            <button class="carousel-arrow carousel-arrow-next" aria-label="Banner Berikutnya">&rsaquo;</button>
+            <div class="carousel-dots" aria-label="Navigasi Slide"></div>
+          </div>
+
+          <!-- Desktop Mini Side Banners -->
+          <div class="hero-side-banners" aria-label="Promo Tambahan">
+            <div class="side-banner-card" style="background: linear-gradient(135deg, #1E88E5, #64B5F6);">
+              <div class="side-banner-info">
+                <h3 class="side-banner-title">Elektronik Murah Lebay</h3>
+                <p class="side-banner-sub">Jaminan Termurah s/d 70% Garansi Resmi</p>
+              </div>
+              <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=400&q=80" alt="Promo Elektronik" loading="lazy" />
+            </div>
+            <div class="side-banner-card" style="background: linear-gradient(135deg, #FB8C00, #FFB74D);">
+              <div class="side-banner-info">
+                <h3 class="side-banner-title">ShopeeFood Diskon 60%</h3>
+                <p class="side-banner-sub">Pesan Kuliner Favorit Gratis Ongkir Cepat</p>
+              </div>
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Promo ShopeeFood" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         ICON GRID MENU (Shortcut 10 Icons, 2 Rows)
+         ================================================================== -->
+    <section class="shortcut-section" aria-label="Navigasi Menu Cepat">
+      <div class="app-container">
+        <div class="shortcut-grid" id="shortcut-grid-menu">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         C. URGENCY & CONVERSION BOOSTERS: FLASH SALE
+         ================================================================== -->
+    <section class="flash-sale-section" id="flash-sale" aria-label="Flash Sale Terbatas">
+      <div class="app-container">
+        <div class="flash-sale-container">
+          <!-- Flash Sale Header with Live Countdown Timer -->
+          <div class="fs-header">
+            <div class="fs-title-box">
+              <span class="fs-logo-tag">⚡ FLASH SALE</span>
+              <div class="fs-countdown-wrap" aria-label="Waktu Tersisa Flash Sale">
+                <span class="timer-box hours" id="fs-hours">03</span>
+                <span class="timer-colon">:</span>
+                <span class="timer-box minutes" id="fs-minutes">47</span>
+                <span class="timer-colon">:</span>
+                <span class="timer-box seconds" id="fs-seconds">12</span>
+              </div>
+            </div>
+            <a href="#recommendations" class="section-see-all">
+              Lihat Semua &rarr;
+            </a>
+          </div>
+
+          <!-- Flash Sale Horizontal Scrollable Track -->
+          <div class="fs-carousel-wrap">
+            <button class="fs-nav-btn fs-nav-prev" aria-label="Geser ke kiri">&lsaquo;</button>
+            <div class="flash-sale-track" id="flash-sale-track">
+              <!-- Rendered by flash-sale.js -->
+            </div>
+            <button class="fs-nav-btn fs-nav-next" aria-label="Geser ke kanan">&rsaquo;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         KLAIM VOUCHER (Voucher Wallet Section)
+         ================================================================== -->
+    <section class="vouchers-section" id="vouchers" aria-label="Klaim Voucher Diskon">
+      <div class="app-container">
+        <div class="voucher-wallet-container">
+          <div class="section-headline-row">
+            <h2 class="section-main-heading">
+              <span class="section-icon-symbol">🎟️</span>
+              Klaim Voucher Spesial Hari Ini
+            </h2>
+            <a href="#recommendations" class="section-see-all">Lihat Semua Voucher &rarr;</a>
+          </div>
+          <div class="vouchers-grid" id="vouchers-section">
+            <!-- Rendered by vouchers.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         D. KATEGORI & KURASI: KATEGORI PILIHAN
+         ================================================================== -->
+    <section class="categories-section" id="categories" aria-label="Kategori Pilihan">
+      <div class="app-container">
+        <div class="categories-container">
+          <div class="section-headline-row">
+            <h2 class="section-main-heading">
+              <span class="section-icon-symbol">📦</span>
+              Kategori Pilihan
+            </h2>
+            <div style="display: flex; gap: 8px;">
+              <button class="fs-nav-btn" id="cat-scroll-prev" style="position: static; transform: none; display: inline-flex;" aria-label="Kategori sebelumnya">&lsaquo;</button>
+              <button class="fs-nav-btn" id="cat-scroll-next" style="position: static; transform: none; display: inline-flex;" aria-label="Kategori berikutnya">&rsaquo;</button>
+            </div>
+          </div>
+          <div class="categories-track-wrap">
+            <div class="categories-track" id="categories-track">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         PENCARIAN POPULER (Top Searches)
+         ================================================================== -->
+    <section class="trending-searches-section" aria-label="Pencarian Populer">
+      <div class="app-container">
+        <div class="trending-searches-container">
+          <div class="section-headline-row">
+            <h2 class="section-main-heading">
+              <span class="section-icon-symbol">🔥</span>
+              Pencarian Populer
+            </h2>
+            <a href="#recommendations" class="section-see-all">Lihat Tren &rarr;</a>
+          </div>
+          <div class="trending-searches-grid" id="trending-searches-grid">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         E. REKOMENDASI PRODUK "REKOMENDASI UNTUKMU" (Infinite Scroll)
+         ================================================================== -->
+    <section class="recommendations-section" id="recommendations" aria-label="Rekomendasi Produk Untukmu">
+      <div class="app-container">
+        <!-- Sticky Section Header & Filter Tabs -->
+        <div class="rec-header-wrapper">
+          <div class="rec-top-row">
+            <h2 class="rec-heading-title">Rekomendasi Untukmu</h2>
+            
+            <div class="rec-controls-right">
+              <span class="rec-counter-text" id="loaded-product-counter">Menampilkan 0 produk</span>
+              <select class="rec-sort-select" id="rec-sort-select" aria-label="Urutkan Rekomendasi">
+                <option value="default">Urutkan: Terkait</option>
+                <option value="top-sales">Paling Banyak Terjual</option>
+                <option value="top-rating">Penilaian Tertinggi</option>
+                <option value="price-asc">Harga: Rendah ke Tinggi</option>
+                <option value="price-desc">Harga: Tinggi ke Rendah</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <nav class="rec-tabs-row" aria-label="Filter Kategori Rekomendasi">
+            <button class="rec-tab-btn active" data-category="Semua">Semua</button>
+            <button class="rec-tab-btn" data-category="Elektronik">Elektronik</button>
+            <button class="rec-tab-btn" data-category="Fashion">Fashion</button>
+            <button class="rec-tab-btn" data-category="Kecantikan">Kecantikan</button>
+            <button class="rec-tab-btn" data-category="Rumah Tangga">Rumah Tangga</button>
+            <button class="rec-tab-btn" data-category="Makanan">Makanan &amp; Minuman</button>
+          </nav>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div class="recommendations-grid" id="recommendations-grid">
+          <!-- Rendered by infinite-scroll.js -->
+        </div>
+
+        <!-- Intersection Observer Sentinel & Loading Spinner -->
+        <div class="infinite-loader-box" id="infinite-loader">
+          <div class="loading-spinner" aria-label="Memuat produk..."></div>
+        </div>
+        <div id="scroll-sentinel" style="height: 20px;"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       FOOTER (Desktop & Informasi Penting)
+       ====================================================================== -->
+  <footer class="app-footer">
+    <div class="app-container">
+      <div class="footer-columns-grid">
+        <div>
+          <h4 class="footer-col-title">Layanan Pelanggan</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" onclick="return false;">Bantuan &amp; FAQ</a></li>
+            <li><a href="#" onclick="return false;">Metode Pembayaran</a></li>
+            <li><a href="#" onclick="return false;">Lacak Pesanan Pembeli</a></li>
+            <li><a href="#" onclick="return false;">Gratis Ongkir &amp; Garansi</a></li>
+            <li><a href="#" onclick="return false;">Pengembalian Barang &amp; Dana</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Jelajahi Shopee</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" onclick="return false;">Tentang Kami</a></li>
+            <li><a href="#" onclick="return false;">Karir di Shopee</a></li>
+            <li><a href="#" onclick="return false;">Kebijakan Shopee</a></li>
+            <li><a href="#" onclick="return false;">Kebijakan Privasi</a></li>
+            <li><a href="#" onclick="return false;">Shopee Mall</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Pembayaran Terpercaya</h4>
+          <div class="footer-payment-icons">
+            <span class="pay-badge">ShopeePay</span>
+            <span class="pay-badge">SPayLater</span>
+            <span class="pay-badge">BCA</span>
+            <span class="pay-badge">Mandiri</span>
+            <span class="pay-badge">BRI</span>
+            <span class="pay-badge">BNI</span>
+            <span class="pay-badge">COD</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Jasa Pengiriman</h4>
+          <div class="footer-shipping-icons">
+            <span class="pay-badge">SPX Express</span>
+            <span class="pay-badge">J&amp;T Express</span>
+            <span class="pay-badge">SiCepat</span>
+            <span class="pay-badge">JNE</span>
+            <span class="pay-badge">GoSend</span>
+            <span class="pay-badge">GrabExpress</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Ikuti Kami</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" onclick="return false;">Facebook</a></li>
+            <li><a href="#" onclick="return false;">Instagram</a></li>
+            <li><a href="#" onclick="return false;">TikTok</a></li>
+            <li><a href="#" onclick="return false;">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-copy">
+        <p>&copy; 2026 Shopee. Hak Cipta Dilindungi Undang-Undang. Didesain dengan prinsip Mobile-First Responsive Design.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       F. STICKY BOTTOM NAVIGATION (Khusus Mobile Web/App)
+       ====================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Navigasi Bawah Seluler">
+    <a href="index.html" class="bottom-nav-item active" data-target="home">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+      <span>Beranda</span>
+    </a>
+
+    <a href="#" class="bottom-nav-item" data-target="live">
+      <span class="live-pulse-badge"></span>
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+      </svg>
+      <span>Live / Feed</span>
+    </a>
+
+    <a href="#" class="bottom-nav-item" data-target="notif">
+      <span class="bottom-nav-badge">2</span>
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+      </svg>
+      <span>Notifikasi</span>
+    </a>
+
+    <a href="#" class="bottom-nav-item" data-target="cart">
+      <span class="bottom-nav-badge cart-badge-count">3</span>
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+      </svg>
+      <span>Keranjang</span>
+    </a>
+
+    <a href="#" class="bottom-nav-item" data-target="profile">
+      <svg class="bottom-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+      </svg>
+      <span>Saya</span>
+    </a>
+  </nav>
+
+  <!-- ======================================================================
+       MODALS, DRAWERS & FLOATING ELEMENTS
+       ====================================================================== -->
+
+  <!-- 1. Shopping Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Keranjang Belanja Anda">
+    <div class="cart-drawer-header">
+      <div class="cart-header-title">
+        <span>🛒 Keranjang Belanja</span>
+      </div>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Tutup Keranjang">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress Indicator -->
+    <div class="cart-free-shipping-bar">
+      <!-- Injected by cart.js -->
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items-list">
+      <!-- Injected by cart.js -->
+    </div>
+
+    <!-- Footer Checkout -->
+    <div class="cart-drawer-footer">
+      <!-- Injected by cart.js -->
+    </div>
+  </aside>
+
+  <!-- 2. Quick View Product Modal -->
+  <div class="drawer-backdrop" id="quickview-backdrop"></div>
+  <div class="modal-wrapper" id="quickview-modal" role="dialog" aria-modal="true" aria-label="Detail Singkat Produk">
+    <button class="modal-close-corner" id="quickview-close" aria-label="Tutup Modal">&times;</button>
+    <div id="quickview-content">
+      <!-- Injected by quick-view.js -->
+    </div>
+  </div>
+
+  <!-- 3. Notifications Popover Modal -->
+  <div class="drawer-backdrop" id="notif-backdrop"></div>
+  <div class="notifications-modal" id="notifications-modal" role="dialog" aria-modal="true" aria-label="Pusat Notifikasi">
+    <div class="notif-header">
+      <span class="notif-title-text">🔔 Notifikasi Promo &amp; Pesanan</span>
+      <button class="modal-close-corner" id="notif-close-btn" aria-label="Tutup Notifikasi">&times;</button>
+    </div>
+    <div class="notif-items-list" id="notif-items-list">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- 4. Download QR Modal -->
+  <div class="drawer-backdrop" id="qr-backdrop"></div>
+  <div class="qr-modal" id="qr-modal" role="dialog" aria-modal="true" aria-label="Download Aplikasi Shopee">
+    <button class="modal-close-corner" id="qr-close-btn" aria-label="Tutup">&times;</button>
+    <h3 style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">Pindai Kode QR Ini</h3>
+    <p class="qr-subtitle">Scan menggunakan kamera ponsel Anda untuk download Shopee App</p>
+    <div class="qr-box">
+      <!-- Generated SVG QR Pattern -->
+      <svg viewBox="0 0 100 100" class="qr-img">
+        <rect width="100" height="100" fill="#fff" />
+        <!-- Corner squares -->
+        <rect x="5" y="5" width="26" height="26" fill="#000" />
+        <rect x="8" y="8" width="20" height="20" fill="#fff" />
+        <rect x="12" y="12" width="12" height="12" fill="#EE4D2D" />
+        
+        <rect x="69" y="5" width="26" height="26" fill="#000" />
+        <rect x="72" y="8" width="20" height="20" fill="#fff" />
+        <rect x="76" y="12" width="12" height="12" fill="#EE4D2D" />
+        
+        <rect x="5" y="69" width="26" height="26" fill="#000" />
+        <rect x="8" y="72" width="20" height="20" fill="#fff" />
+        <rect x="12" y="76" width="12" height="12" fill="#EE4D2D" />
+
+        <!-- Mock Data bits -->
+        <rect x="36" y="10" width="6" height="6" fill="#000" />
+        <rect x="46" y="8" width="8" height="6" fill="#000" />
+        <rect x="58" y="12" width="6" height="6" fill="#000" />
+        <rect x="36" y="24" width="8" height="8" fill="#000" />
+        <rect x="48" y="26" width="6" height="6" fill="#EE4D2D" />
+        <rect x="10" y="38" width="12" height="6" fill="#000" />
+        <rect x="28" y="40" width="8" height="8" fill="#000" />
+        <rect x="42" y="40" width="16" height="16" fill="#000" />
+        <rect x="64" y="38" width="10" height="6" fill="#000" />
+        <rect x="78" y="42" width="14" height="6" fill="#000" />
+        <rect x="12" y="52" width="6" height="8" fill="#000" />
+        <rect x="24" y="56" width="10" height="6" fill="#EE4D2D" />
+        <rect x="62" y="52" width="8" height="12" fill="#000" />
+        <rect x="76" y="56" width="16" height="8" fill="#000" />
+        <rect x="38" y="66" width="12" height="6" fill="#000" />
+        <rect x="54" y="64" width="8" height="8" fill="#000" />
+        <rect x="38" y="78" width="8" height="14" fill="#000" />
+        <rect x="50" y="76" width="14" height="6" fill="#000" />
+        <rect x="68" y="74" width="8" height="12" fill="#EE4D2D" />
+        <rect x="80" y="80" width="12" height="12" fill="#000" />
+      </svg>
+    </div>
+    <p style="font-size: 11px; color: #757575;">Tersedia di Google Play Store &amp; Apple App Store</p>
+  </div>
+
+  <!-- 5. Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="assertive"></div>
+
+  <!-- 6. Floating Back to Top Button -->
+  <button class="btn-back-to-top" id="btn-back-to-top" aria-label="Kembali ke atas">
+    &uarr;
+  </button>
+
+  <!-- ======================================================================
+       SCRIPTS (Modular & Clean)
+       ====================================================================== -->
+  <script src="js/products-data.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/flash-sale.js"></script>
+  <script src="js/vouchers.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/quick-view.js"></script>
+  <script src="js/infinite-scroll.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
